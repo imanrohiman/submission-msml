@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 import os
 
-df = load_data("titanic.csv")
+df = load_data("dataset/titanic.csv")
 
 X = df.drop("Survived", axis=1)
 y = df["Survived"]
