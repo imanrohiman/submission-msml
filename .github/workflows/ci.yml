@@ -21,6 +21,9 @@ jobs:
       run: |
         pip install pandas scikit-learn joblib
 
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$PYTHONPATH:." >> $GITHUB_ENV
+
     - name: Run training
       run: |
         python membangun_model/training.py
