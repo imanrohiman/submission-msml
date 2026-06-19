@@ -23,4 +23,4 @@ jobs:
 
     - name: Run training
       run: |
-        python training.py
+        python membangun_model/training.py
