@@ -4,6 +4,7 @@ from modeling.modeling import train_model
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
+import os
 
 df = load_data("titanic.csv")
 
@@ -21,4 +22,5 @@ model = train_model(X_train, y_train)
 pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, pred))
 
+os.makedirs("membangun_model/model", exist_ok=True)
 joblib.dump(model, "membangun_model/model/model.pkl")
